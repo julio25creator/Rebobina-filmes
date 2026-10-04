@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Collapse } from 'bootstrap'
 
 const links = [
   { id: 'inicio', texto: 'Início' },
@@ -24,6 +25,11 @@ export default function Navbar() {
     })
     return () => observer.disconnect()
   }, [])
+
+  // No celular, fecha o menu depois de clicar em um item
+  function fecharMenu() {
+    Collapse.getInstance(document.getElementById('menu'))?.hide()
+  }
 
   return (
     <header className="sticky-top menu-topo">
@@ -54,8 +60,7 @@ export default function Navbar() {
                 <a
                   className={`nav-link rounded-5 ${ativo === id ? 'active' : ''}`}
                   href={`#${id}`}
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
+                  onClick={fecharMenu}
                 >
                   {texto}
                 </a>
