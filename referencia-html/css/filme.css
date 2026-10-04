@@ -1,0 +1,166 @@
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../img/filmes/poltronas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;     /* efeito parallax */
+}
+
+main {
+    flex: 1;                          /* empurra o rodapé para o fim da tela */
+}
+
+/* ---------- MENU ---------- */
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 4%;
+}
+
+/* ---------- BOTÕES ---------- */
+button {
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    transition: 0.3s;
+}
+
+/* ---------- TÍTULO ---------- */
+.titulo {
+    margin: 40px 0;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+/* ---------- CATÁLOGO ---------- */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 35px;                 /* o espaço entre linhas vem do margin do card */
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/* ---------- CARD ----------
+   Cada card ocupa 5 linhas do catálogo (capa, nome, gênero, preço e botão)
+   e usa as mesmas linhas dos vizinhos (subgrid). Assim, mesmo com nomes de
+   1, 2 ou 3 linhas, tudo fica alinhado entre os cards da mesma fileira. */
+.card {
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: #FFFDF7;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Capa: mesma altura em todos os cards */
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Nome do filme: centralizado na altura da linha */
+.card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: #8A5A44;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+/* Gênero */
+.card .genero {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Preço */
+.preco {
+    margin-top: 15px;
+    color: #A86A3D;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Botão */
+.card button {
+    justify-self: center;
+    align-self: end;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #DDA15E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #BC6C25;
+}
+
+/* ---------- RODAPÉ ---------- */
+footer {
+    margin-top: 15px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 1000px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 700px) {
+    .catalogo {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+    }
+
+    .titulo {
+        margin: 25px 10px;
+        font-size: 35px;
+    }
+}
