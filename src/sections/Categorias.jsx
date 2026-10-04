@@ -5,21 +5,6 @@ const categorias = [
     texto: 'Clássicos, comédias, terror, aventura e muito mais.',
     link: '#filmes',
   },
-  {
-    icone: '📺',
-    nome: 'Séries',
-    texto: 'As séries que marcaram gerações inteiras.',
-  },
-  {
-    icone: '🕹️',
-    nome: 'Jogos',
-    texto: 'Clássicos que fizeram história nos videogames.',
-  },
-  {
-    icone: '🎵',
-    nome: 'Música',
-    texto: 'As melhores músicas de todos os tempos.',
-  },
 ]
 
 export default function Categorias() {
@@ -46,14 +31,14 @@ export default function Categorias() {
               NOSSO CATÁLOGO
             </span>
             <h2 className="display-5 fw-bold mt-3">
-              O que você quer assistir hoje?
+              Qual filme você quer assistir hoje?
             </h2>
-            <p className="text-muted">Tem nostalgia para todo tipo de gosto.</p>
+            <p className="text-muted">Todos os gêneros para todo tipo de gosto.</p>
           </div>
 
-          <div className="row g-4">
+          <div className="row g-4 justify-content-center">
             {categorias.map((c) => (
-              <div className="col-md-6 col-lg-3" key={c.nome}>
+              <div className="col-md-6 col-lg-4" key={c.nome}>
                 <div className="categoria-card h-100">
                   <div className="icone">{c.icone}</div>
                   <h3>{c.nome}</h3>

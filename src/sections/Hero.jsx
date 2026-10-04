@@ -15,7 +15,7 @@ export default function Hero() {
             </h2>
 
             <p className="lead mt-4">
-              Filmes, séries, músicas e jogos para você voltar no tempo sem
+              Filmes, para você voltar no tempo sem
               sair do sofá.
             </p>
 
