@@ -1,16 +1,36 @@
-# React + Vite
+# Rebobina | Landing Page em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Parte 2 (individual) do trabalho da disciplina Desenvolvimento Frontend II, Universidade Veiga de Almeida, Prof. Caio Silva Azeredo.
 
-Currently, two official plugins are available:
+## Autor
+Julio Cesar da Silva Lima
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Origem
+- Repositório do grupo (Parte 1): https://github.com/MisterSmuca/Rebobina
+- Página que fiz na Parte 1: filme.html (também fiz serie.html)
+- Autora do index (inicio.html) original: Nayara
+- Os arquivos originais estão em `referencia-html/`
 
-## React Compiler
+## Site publicado
+https://rebobina-julio.netlify.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como executar
+npm install
+npm run dev
 
-## Expanding the ESLint configuration
+## Seções da Landing Page
+| Seção | Origem |
+|---|---|
+| Menu | inicio.html + filme.html (menu unificado, com âncoras) |
+| Hero | inicio.html |
+| Categorias | inicio.html |
+| Filmes | filme.html (minha página) |
+| Sorteio "Escolha por mim" | inicio.html (agora sorteia um filme) |
+| Nossa história | inicio.html |
+| Chamada final | inicio.html (destaque da semana) |
+| Rodapé | inicio.html + filme.html (rodapé único) |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Algumas observações
+- Mantive só a categoria Filmes, porque as outras páginas do grupo não fazem parte desta Landing.
+- O sorteio "Escolha por mim" agora sorteia um filme do catálogo.
+- Optei por deixar história porque cada integrante teve papel importante no primeiro trabalho.
